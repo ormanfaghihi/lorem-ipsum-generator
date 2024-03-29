@@ -490,7 +490,7 @@ function simpleResource(input) {
         <div class="controls mb-4">
           <div class="row g-3">
 
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
               <select class="form-select" v-model="inputs.type">
                 <option value="paragraph">پاراگراف</option>
                 <option value="sentence">جمله</option>
@@ -501,7 +501,7 @@ function simpleResource(input) {
                 <!--        <option value="comment">کامنت</option>-->
               </select>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
               <select class="form-select" v-model="inputs.lang">
                 <option value="en">انگلیسی</option>
                 <option value="fa">فارسی</option>
@@ -512,7 +512,7 @@ function simpleResource(input) {
                 <!--        <option value="ar">العربية</option>-->
               </select>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
               <div class="d-flex gap-2 align-items-center">
                 <input v-model="inputs.n" value="10" class="form-control text-center" readonly>
 
@@ -533,7 +533,7 @@ function simpleResource(input) {
 
             </div>
 
-            <div class="d-flex gap-4" v-if="inputs.type === 'paragraph' || inputs.type === 'sentence' || inputs.type ===  'word'">
+            <div class="col-12 d-flex flex-wrap gap-4" v-if="inputs.type === 'paragraph' || inputs.type === 'sentence' || inputs.type ===  'word'">
               <label class="form-check" v-if="inputs.type === 'paragraph' || inputs.type === 'sentence' || inputs.type ===  'word'">
                 <input class="form-check-input" type="checkbox" v-model="inputs.isTrainy">
                 <div class="form-check-label">
@@ -595,7 +595,8 @@ body {
   position: sticky;
   top: 0;
   transform-origin: top center;
-  transform: scale(1.03);
+  //transform: scale(1.03);
+
 }
 
 .controls::after {
